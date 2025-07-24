@@ -10,3 +10,15 @@
 #9.Compare los archivos libro.txt con libro2.txt
 #10.Comente cada línea de código.
 #11.Subir la actividad resuelta a Classroom.
+import os
+ubicacion_carpeta = 'C://NORMALIZAR'
+
+try:
+    os.makedirs(ubicacion_carpeta, exist_ok=True)  # Crea la carpeta NORMALIZAR si no existe
+    print("Carpeta NORMALIZAR creada o ya existe.")
+except PermissionError:
+    print("No se pudo crear la carpeta NORMALIZAR. Permiso denegado.")
+except Exception as e:
+    print(f"Ocurrio un error: {e}")
+# Ruta del archivo original
+
